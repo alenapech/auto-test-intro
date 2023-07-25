@@ -1,0 +1,89 @@
+package org.max.demo;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+@Disabled
+public class AddTestToFileTest {
+
+    //Объект подключения
+    private static Connection connection;
+
+    @BeforeAll
+    static void init() {
+        connect("project.db");
+    }
+
+    @Test
+    void addDataToDB() {
+        String csvFile = "C:\\Users\\kravm\\IdeaProjects\\auto\\src\\test\\resources\\request_type.csv";
+        int id = 1;
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))){
+            String line = "";
+            String cvsSplitBy = ";";
+            while ((line = br.readLine()) != null) {
+                String[] lines = line.split(cvsSplitBy);
+
+                insertRequestInfo(id, lines[0],lines[1],lines[2],lines[3]);
+                id++;
+
+
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void insertRequestInfo(Integer id, String name, String weight, String description, String status) {
+        String sql = "INSERT INTO request_type(" +
+                "id, request_name, weight, description, status) VALUES(?,?,?,?,?)";
+        try{
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            pstmt.setInt(1, id);
+            pstmt.setString(2, name);
+            pstmt.setString(3, weight);
+            pstmt.setString(4, description);
+            pstmt.setString(5, String.valueOf(GenerateFileTest.StatusType.valueOf(status).getCode()));
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    static int id=1;
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/request_type.csv", numLinesToSkip = 0, delimiterString = ";")
+    void addDataToDB(String name, String weight, String description, String status) {
+        insertRequestInfo(id, name, weight, description, status);
+        id++;
+    }
+
+    //Создание подключений к СУБД
+    private static void connect(String name) {
+        try {
+            //Регистрация драйвера
+            Class.forName("org.sqlite.JDBC");
+            //Создание подключения
+            connection = DriverManager.getConnection("jdbc:sqlite:"+name);
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Opened database successfully");
+    }
+}

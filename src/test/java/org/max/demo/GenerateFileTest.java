@@ -2,6 +2,7 @@ package org.max.demo;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+@Disabled
 public class GenerateFileTest {
 
     static List<RequestType> requestTypes = new ArrayList<RequestType>(10000);
@@ -92,10 +94,10 @@ public class GenerateFileTest {
         }
     }
 
-    private enum StatusType {
+    public enum StatusType {
         NEW(0),
         OLD(1),
-        CLOSED(2);
+        CANCELED(2);
 
         private int code;
 
