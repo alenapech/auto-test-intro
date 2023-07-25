@@ -13,29 +13,31 @@ import java.util.Random;
 
 public class GenerateFileTest {
 
-    static List<Employee> employeeList = new ArrayList<Employee>(10000);
+    static List<RequestType> requestTypes = new ArrayList<RequestType>(10000);
 
     @BeforeAll
     static void init() {
+        Random random = new Random();
         Faker faker = new Faker();
         for(int i=0; i<10000; i++) {
-            employeeList.add(new Employee(faker.name().fullName(),
-                    faker.address().fullAddress(),
-                    faker.phoneNumber().phoneNumber()));
+            requestTypes.add(new RequestType(faker.code().asin().toUpperCase(),
+                                String.valueOf(random.nextInt(100)),
+                       "DESCRIPTION",
+                                StatusType.randomDirection()));
         }
     }
 
     @Test
     void generateFileCSVTest() throws IOException {
 
-        File csvFile = new File("employees.csv");
+        File csvFile = new File("request_type.csv");
         FileWriter fileWriter = new FileWriter(csvFile);
 
-        for (Employee data : employeeList) {
+        for (RequestType data : requestTypes) {
             StringBuilder line = new StringBuilder();
             line.append(data.getName()+';');
-            line.append(data.getAddress()+';');
-            line.append(data.getPhone()+';');
+            line.append(data.getWeight()+';');
+            line.append(data.getDescription()+';');
             line.append(data.getStatusType().name()+';');
 
             line.append("\n");
@@ -44,17 +46,17 @@ public class GenerateFileTest {
         fileWriter.close();
     }
 
-    private static class Employee {
+    private static class RequestType {
         private String name;
-        private String address;
-        private String phone;
+        private String weight;
+        private String description;
         private StatusType statusType;
 
-        public Employee(String name, String address, String phone) {
-            this.name = name.replaceAll(";",",");
-            this.address = address.replaceAll(";",",");
-            this.phone = phone.replaceAll(";",",");
-            this.statusType = StatusType.randomDirection();
+        public RequestType(String name, String weight, String description, StatusType statusType) {
+            this.name = name;
+            this.weight = weight;
+            this.description = description;
+            this.statusType = statusType;
         }
 
         public String getName() {
@@ -65,20 +67,20 @@ public class GenerateFileTest {
             this.name = name;
         }
 
-        public String getAddress() {
-            return address;
+        public String getWeight() {
+            return weight;
         }
 
-        public void setAddress(String address) {
-            this.address = address;
+        public void setWeight(String weight) {
+            this.weight = weight;
         }
 
-        public String getPhone() {
-            return phone;
+        public String getDescription() {
+            return description;
         }
 
-        public void setPhone(String phone) {
-            this.phone = phone;
+        public void setDescription(String description) {
+            this.description = description;
         }
 
         public StatusType getStatusType() {
