@@ -1,4 +1,3 @@
-import org.max.demo.Triangle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +18,7 @@ public class BankCreditService {
     public CreditParam getParams(String clientId, String period, String summ, String initSumm) throws BankCreditException {
         logger.info("Вызван сервис получения данных для расчета кредита");
         if(blackListService.isInBlackList(clientId)) {
+            logger.info("Клиент в черном списке: " + clientId);
             throw new BankCreditException("Клиент в черном списке");
         }
 
@@ -27,6 +27,7 @@ public class BankCreditService {
             Integer testsumm = Integer.valueOf(summ);
             Integer testinitSumm = Integer.valueOf(initSumm);
         } catch (IllegalArgumentException ex) {
+            logger.info("Данные для расчета кредита не валидны");
             throw new BankCreditException("Не валидные данные");
         }
 
@@ -34,7 +35,10 @@ public class BankCreditService {
         if(creditParam.isPresent()) {
             logger.info("Данные для расчета кредита получены");
             return creditParam.get();
-        } else throw new BankCreditException("Данные по запросу не найдены");
+        } else {
+            logger.info("Данные для расчета кредита не найдены");
+            throw new BankCreditException("Данные по запросу не найдены");
+        }
 
     }
 }

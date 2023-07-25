@@ -10,4 +10,9 @@ public class BlackListService {
         logger.info("Обращение к сервису черных списков для проверки клиента");
         return false;
     }
+
+    public boolean isInWhiteList(String clientId) {
+        logger.info("Обращение к сервису белых списков для проверки клиента");
+        return true;
+    }
 }
