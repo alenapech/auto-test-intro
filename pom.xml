@@ -48,25 +48,19 @@
             <version>${sql.version}</version>
         </dependency>
 
-        <!-- Лекция 4. ORM -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>${hibernate-version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate-version}</version>
-        </dependency>
-
         <!-- Лекция 4. Диалект -->
         <dependency>
             <groupId>com.zsoltfabok</groupId>
             <artifactId>sqlite-dialect</artifactId>
             <version>1.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
     </dependencies>
 
     <!-- Сборка -->
@@ -91,8 +85,8 @@
                     <schemas>
                         <schema>schemaName</schema>
                     </schemas>  -->
-                    <url>jdbc:sqlite:demo.db</url>
-                    <locations>filesystem:db/demo/migration</locations>
+                    <url>jdbc:sqlite:project.db</url>
+                    <locations>filesystem:db/migration</locations>
                 </configuration>
             </plugin>
             <plugin>
@@ -102,13 +96,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <!-- Репозитории -->
-    <repositories>
-        <repository>
-            <id>mvnrepository</id>
-            <url>https://mvnrepository.com/</url>
-        </repository>
-    </repositories>
 
 </project>
