@@ -1,8 +1,16 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.List;
+import java.util.Optional;
 
 public class CreditParamRepository {
 
-    public List<CreditParam> getCreditParams(String period, String summ, String initSumm) {
+    private static final Logger logger
+            = LoggerFactory.getLogger(CreditParamRepository.class);
+
+    public Optional<CreditParam> getCreditParams(String period, String summ, String initSumm) {
+        logger.info("Обращение к базе данных за параметрами кредита");
         return null;
     }
 }
