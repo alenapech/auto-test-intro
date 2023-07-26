@@ -1,3 +1,4 @@
+import com.github.tomakehurst.wiremock.WireMockServer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,10 +9,13 @@ import org.mockito.Mockito;
 import java.util.ArrayList;
 import java.util.Optional;
 
+import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 
 public class BankCreditTest {
+
+    static WireMockServer wireMockServer = new WireMockServer(8888);
 
     @ParameterizedTest
     @CsvSource({"100,10,100000,500", "101,20,10000,5000", "102,5,5000,1000"})
@@ -59,6 +63,25 @@ public class BankCreditTest {
                 () -> bankCreditService.getParams("100","10","100000","500"));
         Mockito.verify(blackListService,Mockito.times(1)).isInBlackList(anyString());
         Mockito.verify(blackListService,Mockito.never()).isInWhiteList(anyString());
+    }
+
+    @Test
+    void when_in_black_list_http_should_throw() {
+        configureFor("localhost", 8888);
+        wireMockServer.start();
+
+        stubFor(get(urlPathMatching("/test/.*"))
+                .willReturn(aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type", "application/json")
+                        .withBody("\"black\": \"true\"")));
+
+        BankCreditService bankCreditService = new BankCreditService(new BlackListService(), new CreditParamRepository());
+
+        Assertions.assertThrows(BankCreditException.class,
+                () -> bankCreditService.getHttpParams("100","10","100000","500"));
+
+        wireMockServer.stop();
     }
 
     @Test
