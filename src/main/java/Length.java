@@ -1,6 +1,3 @@
-
-package org.max.seminar.recipers;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -12,20 +9,20 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "unit"
 })
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Temperature {
+public class Length {
 
     @JsonProperty("number")
-    private Double number;
+    private Integer number;
     @JsonProperty("unit")
     private String unit;
 
     @JsonProperty("number")
-    public Double getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
     @JsonProperty("number")
-    public void setNumber(Double number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 

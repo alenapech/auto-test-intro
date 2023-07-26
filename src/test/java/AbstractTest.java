@@ -1,5 +1,3 @@
-package org.max.seminar;
-
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
 

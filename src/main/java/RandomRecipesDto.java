@@ -1,7 +1,3 @@
-package org.max.seminar;
-
-import org.max.seminar.recipers.OrgMaxLesson3Seminar;
-
 import java.util.List;
 
 public class RandomRecipesDto {
