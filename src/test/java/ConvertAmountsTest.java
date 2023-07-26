@@ -1,14 +1,22 @@
 import io.qameta.allure.*;
+import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.time.LocalDateTime;
 
 import static io.restassured.RestAssured.given;
 
 @Epic(value = "Тестирование API https://spoonacular.com/food-api")
 @Feature(value = "Семинар")
 public class ConvertAmountsTest extends AbstractTest {
+
+    private static final Logger logger
+            = LoggerFactory.getLogger(ConvertAmountsTest.class);
 
     @Test
     @DisplayName("ConvertAmountsTest")
@@ -18,7 +26,8 @@ public class ConvertAmountsTest extends AbstractTest {
     @Owner("Кравченко Максим")
     @Story(value = "Тестирование метода ConvertAmounts")
     void getConvertAmounts_whenValid_shouldReturn() {
-        ConvertAmountsDto response = given()
+        logger.info("Вызван метод конвертации");
+        Response response = given()
                 .queryParam("apiKey", getApiKey())
                 .queryParam("ingredientName", "flour")
                 .queryParam("sourceAmount", 2.5)
@@ -30,10 +39,15 @@ public class ConvertAmountsTest extends AbstractTest {
                 .statusCode(200)
                 .time(Matchers.lessThan(1000l))
                 .extract()
-                .response()
-                .body().as(ConvertAmountsDto.class);
+                .response();
 
-        Assertions.assertEquals(response.getTargetAmount(),312.5);
+        SaveResultToDBService.insertEmployeeInfo(String.valueOf(response.statusCode()),
+                "recipes/convert",
+                "GET",
+                LocalDateTime.now().toString());
+
+        Assertions.assertEquals(response.body().as(ConvertAmountsDto.class).getTargetAmount(),312.5);
+
 
     }
 }

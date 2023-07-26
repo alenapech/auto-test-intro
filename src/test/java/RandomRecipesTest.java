@@ -1,14 +1,22 @@
 import io.qameta.allure.*;
+import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.time.LocalDateTime;
 
 import static io.restassured.RestAssured.given;
 
 @Epic(value = "Тестирование API https://spoonacular.com/food-api")
 @Feature(value = "Семинар")
 public class RandomRecipesTest extends AbstractTest {
+
+    private static final Logger logger
+            = LoggerFactory.getLogger(RandomRecipesTest.class);
 
     @Test
     @DisplayName("RandomRecipesTest")
@@ -18,7 +26,8 @@ public class RandomRecipesTest extends AbstractTest {
     @Owner("Кравченко Максим")
     @Story(value = "Тестирование метода RandomRecipes")
     void getRandomRecipes_whenValid_shouldReturn() {
-        RandomRecipesDto response = given()
+        logger.info("Вызван метод получение рандомного рецепта");
+        Response response = given()
                 .queryParam("apiKey", getApiKey())
                 .queryParam("number", 5)
                 .when()
@@ -27,9 +36,13 @@ public class RandomRecipesTest extends AbstractTest {
                 .statusCode(200)
                 .time(Matchers.lessThan(1000l))
                 .extract()
-                .response()
-                .body().as(RandomRecipesDto.class);
+                .response();
 
-        Assertions.assertEquals(response.recipes.size(),5);
+        SaveResultToDBService.insertEmployeeInfo(String.valueOf(response.statusCode()),
+                "recipes/random",
+                "GET",
+                LocalDateTime.now().toString());
+
+        Assertions.assertEquals(response.body().as(RandomRecipesDto.class).recipes.size(),5);
     }
 }

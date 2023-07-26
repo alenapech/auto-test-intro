@@ -1,9 +1,13 @@
 import io.qameta.allure.*;
+import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
@@ -11,6 +15,9 @@ import static io.restassured.RestAssured.given;
 @Epic(value = "Тестирование API https://spoonacular.com/food-api")
 @Feature(value = "Семинар")
 public class SimilarRecipesTest extends AbstractTest {
+
+    private static final Logger logger
+            = LoggerFactory.getLogger(SimilarRecipesTest.class);
 
     @Test
     @DisplayName("SimilarRecipesTest")
@@ -20,7 +27,8 @@ public class SimilarRecipesTest extends AbstractTest {
     @Owner("Кравченко Максим")
     @Story(value = "Тестирование метода SimilarRecipes")
     void getSimilarRecipes_whenValid_shouldReturn() {
-        List<SimilarRecipesDto> response = given()
+        logger.info("Вызван метод получение рецепата");
+        Response response = given()
                 .queryParam("apiKey", getApiKey())
                 .when()
                 .get(getBaseUrl()+"recipes/715538/similar")
@@ -28,10 +36,16 @@ public class SimilarRecipesTest extends AbstractTest {
                 .statusCode(200)
                 .time(Matchers.lessThan(2000l))
                 .extract()
-                .body().jsonPath().getList(".", SimilarRecipesDto.class);
+                .response();
 
-        Assertions.assertEquals(response.size(),10);
-        response.forEach(v -> {
+        SaveResultToDBService.insertEmployeeInfo(String.valueOf(response.statusCode()),
+                "recipes/715538/similar",
+                "GET",
+                LocalDateTime.now().toString());
+        List<SimilarRecipesDto> similarRecipesDtos = response.body().jsonPath().getList(".", SimilarRecipesDto.class);
+
+        Assertions.assertEquals(similarRecipesDtos.size(),10);
+        similarRecipesDtos.forEach(v -> {
             if (v.getId().equals(209128)) {
                 Assertions.assertEquals(v.getTitle(),"Dinner Tonight: Grilled Romesco-Style Pork");
             }
