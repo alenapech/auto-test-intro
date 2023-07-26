@@ -7,10 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -20,6 +17,7 @@ public class AddTestToFileTest {
 
     //Объект подключения
     private static Connection connection;
+    String csvFile = "C:\\Users\\kravm\\IdeaProjects\\auto\\src\\test\\resources\\request_type.csv";
 
     @BeforeAll
     static void init() {
@@ -28,7 +26,7 @@ public class AddTestToFileTest {
 
     @Test
     void addDataToDB() {
-        String csvFile = "C:\\Users\\kravm\\IdeaProjects\\auto\\src\\test\\resources\\request_type.csv";
+
         int id = 1;
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))){
             String line = "";
@@ -72,6 +70,30 @@ public class AddTestToFileTest {
         insertRequestInfo(id, name, weight, description, status);
         id++;
     }
+
+
+    @Test
+    void createFilesToImportAndDelete() throws IOException {
+        int id=1;
+        String sql = "INSERT INTO request_type(" +
+                "id, request_name, weight, description, status)" +
+                " VALUES (%s, '%s', '%s', '%s', '%s');";
+        try (FileWriter fileWriterSQLInsert = new FileWriter("insert_objects.sql");
+            PrintWriter printWriterSQLInsert = new PrintWriter(fileWriterSQLInsert);
+            BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+
+            String line = "";
+            String cvsSplitBy = ";";
+            while ((line = br.readLine()) != null) {
+                String[] lines = line.split(cvsSplitBy);
+
+                printWriterSQLInsert.printf(sql + '\n', id, lines[0], lines[1], lines[2], lines[3]);
+                printWriterSQLInsert.printf("" + '\n');
+                id++;
+            }
+
+            }
+        }
 
     //Создание подключений к СУБД
     private static void connect(String name) {
