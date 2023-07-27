@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
 @Disabled
 public class AddTestToFileTest {
 
@@ -73,7 +73,7 @@ public class AddTestToFileTest {
 
 
     @Test
-    void createFilesToImportAndDelete() throws IOException {
+    void createFilesToImport() throws IOException {
         int id=1;
         String sql = "INSERT INTO request_type(" +
                 "id, request_name, weight, description, status)" +
