@@ -13,7 +13,6 @@ public abstract class AbstractTest {
     private static String apiKey;
     private static String baseUrl;
 
-
     @BeforeAll
     static void initTest() throws IOException {
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
