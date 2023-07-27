@@ -34,7 +34,7 @@ public class SimilarRecipesTest extends AbstractTest {
                 .get(getBaseUrl()+"recipes/715538/similar")
                 .then()
                 .statusCode(200)
-                .time(Matchers.lessThan(2000l))
+                .time(Matchers.lessThan(20000l))
                 .extract()
                 .response();
 

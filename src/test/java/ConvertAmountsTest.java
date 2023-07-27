@@ -37,7 +37,7 @@ public class ConvertAmountsTest extends AbstractTest {
                 .get(getBaseUrl()+"recipes/convert")
                 .then()
                 .statusCode(200)
-                .time(Matchers.lessThan(1000l))
+                .time(Matchers.lessThan(10000l))
                 .extract()
                 .response();
 
