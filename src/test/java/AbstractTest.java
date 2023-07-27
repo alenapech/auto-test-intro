@@ -21,7 +21,6 @@ public abstract class AbstractTest {
 
         apiKey =  prop.getProperty("apiKey");
         baseUrl= prop.getProperty("base_url");
-
     }
 
     public static String getApiKey() {
