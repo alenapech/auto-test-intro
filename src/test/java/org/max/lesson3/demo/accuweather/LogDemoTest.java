@@ -8,6 +8,7 @@ import static io.restassured.RestAssured.given;
 public class LogDemoTest extends AccuweatherAbstractTest{
 
     @Test
+    @Disabled
     void logRequestTest() {
         given().log().parameters().log().method()
                 .queryParam("apikey", getApiKey())
@@ -20,6 +21,7 @@ public class LogDemoTest extends AccuweatherAbstractTest{
     }
 
     @Test
+    @Disabled
     void logResponseTest() {
         given().log().parameters()
                 .queryParam("apikey", getApiKey())

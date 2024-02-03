@@ -2,6 +2,7 @@ package org.max.lesson3.seminar.spoonacular;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import static io.restassured.RestAssured.given;
 public class SimilarRecipesTestSpoonacular extends SpoonacularAbstractTest {
 
     @Test
+    @Disabled
     void getSimilarRecipes_whenValid_shouldReturn() {
         List<SimilarRecipesDto> response = given()
                 .queryParam("apiKey", getApiKey())

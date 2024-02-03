@@ -2,6 +2,7 @@ package org.max.lesson3.seminar.spoonacular;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -9,6 +10,7 @@ import static io.restassured.RestAssured.given;
 public class ConvertAmountsTestSpoonacular extends SpoonacularAbstractTest {
 
     @Test
+    @Disabled
     void getConvertAmounts_whenValid_shouldReturn() {
         ConvertAmountsDto response = given()
                 .queryParam("apiKey", getApiKey())

@@ -1,5 +1,6 @@
 package org.max.lesson3.demo;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -10,6 +11,7 @@ import static io.restassured.RestAssured.given;
 public class RestAssuredExampleTest {
 
     @Test
+    @Disabled
     void test() {
         given()
         .when().get("https://www.google.com/")

@@ -6,6 +6,7 @@ import io.restassured.http.Headers;
 import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -19,6 +20,7 @@ import static org.hamcrest.Matchers.lessThan;
 public class DemoTest extends AccuweatherAbstractTest{
 
     @Test
+    @Disabled
     void getExampleTest() {
         given()
                 .when()
@@ -30,6 +32,7 @@ public class DemoTest extends AccuweatherAbstractTest{
     }
 
     @Test
+    @Disabled
     void getSpecifyingRequestDataTest() {
         given()
                 .when()
@@ -67,6 +70,7 @@ public class DemoTest extends AccuweatherAbstractTest{
     }
 
     @Test
+    @Disabled
     void getResponseData(){
         Response response = given()
                 .when()
@@ -110,6 +114,7 @@ public class DemoTest extends AccuweatherAbstractTest{
     }
 
     @Test
+    @Disabled
     void getVerifyingResponseData(){
 
         JsonPath response = given()

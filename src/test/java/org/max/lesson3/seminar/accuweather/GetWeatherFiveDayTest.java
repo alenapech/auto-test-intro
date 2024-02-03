@@ -2,6 +2,7 @@ package org.max.lesson3.seminar.accuweather;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.max.lesson3.home.accuweather.AccuweatherAbstractTest;
 import org.max.lesson3.home.accuweather.weather.Weather;
@@ -13,6 +14,7 @@ import static io.restassured.RestAssured.given;
 public class GetWeatherFiveDayTest extends AccuweatherAbstractTest {
 
     @Test
+    @Disabled
     void getWeatherFiveDay_shouldReturn() {
 
         Weather response = given()

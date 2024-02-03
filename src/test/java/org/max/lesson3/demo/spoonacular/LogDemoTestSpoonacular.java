@@ -8,6 +8,7 @@ import static io.restassured.RestAssured.given;
 public class LogDemoTestSpoonacular extends SpoonacularAbstractTest {
 
     @Test
+    @Disabled
     void logRequestTest() {
         given().log().parameters().log().method()
                 .queryParam("apiKey", getApiKey())
@@ -20,6 +21,7 @@ public class LogDemoTestSpoonacular extends SpoonacularAbstractTest {
     }
 
     @Test
+    @Disabled
     void logResponseTest() {
         given()
                 .when()

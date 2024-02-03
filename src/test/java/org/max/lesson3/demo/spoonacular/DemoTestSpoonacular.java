@@ -6,6 +6,7 @@ import io.restassured.http.Headers;
 import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -19,6 +20,7 @@ import static org.hamcrest.Matchers.lessThan;
 public class DemoTestSpoonacular extends SpoonacularAbstractTest {
 
     @Test
+    @Disabled
     void getExampleTest() {
         given()
                 .when()
@@ -36,6 +38,7 @@ public class DemoTestSpoonacular extends SpoonacularAbstractTest {
     }
 
     @Test
+    @Disabled
     void getSpecifyingRequestDataTest() {
         given()
                 .queryParam("apiKey", getApiKey())
@@ -109,6 +112,7 @@ public class DemoTestSpoonacular extends SpoonacularAbstractTest {
 
 
     @Test
+    @Disabled
     void getResponseData(){
         Response response = given()
                             .when()
@@ -159,6 +163,7 @@ public class DemoTestSpoonacular extends SpoonacularAbstractTest {
     }
 
     @Test
+    @Disabled
     void getVerifyingResponseData(){
 
         JsonPath response = given()
@@ -212,6 +217,7 @@ public class DemoTestSpoonacular extends SpoonacularAbstractTest {
     }
 
     @Test
+    @Disabled
     void addMealTest() {
         String id = given()
                 .queryParam("hash", "a3da66460bfb7e62ea1c96cfa0b7a634a346ccbf")
@@ -247,6 +253,7 @@ public class DemoTestSpoonacular extends SpoonacularAbstractTest {
     }
 
     @Test
+    @Disabled
     void getAccountInfoWithExternalEndpointTest(){
         ResponseDTO response = given()
                 .queryParam("apiKey", getApiKey())

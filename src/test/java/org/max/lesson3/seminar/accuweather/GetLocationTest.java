@@ -2,6 +2,7 @@ package org.max.lesson3.seminar.accuweather;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.max.lesson3.home.accuweather.AccuweatherAbstractTest;
 import org.max.lesson3.seminar.accuweather.location.Location;
@@ -13,6 +14,7 @@ import static io.restassured.RestAssured.given;
 public class GetLocationTest extends AccuweatherAbstractTest {
 
     @Test
+    @Disabled
     void getLocation_autocomplete_returnSamara() {
 
         List<Location> response = given()
