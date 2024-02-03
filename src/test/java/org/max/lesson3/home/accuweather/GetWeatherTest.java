@@ -2,7 +2,7 @@ package org.max.lesson3.home.accuweather;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.max.lesson3.seminar.accuweather.AccuweatherAbstractTest;
+import org.max.lesson3.home.accuweather.AccuweatherAbstractTest;
 import org.max.lesson3.seminar.accuweather.weather.DailyForecast;
 import org.max.lesson3.seminar.accuweather.weather.Weather;
 

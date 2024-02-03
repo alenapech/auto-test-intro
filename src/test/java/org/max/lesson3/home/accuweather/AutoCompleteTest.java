@@ -1,7 +1,7 @@
 package org.max.lesson3.home.accuweather;
 
 import org.junit.jupiter.api.Test;
-import org.max.lesson3.seminar.accuweather.AccuweatherAbstractTest;
+import org.max.lesson3.home.accuweather.AccuweatherAbstractTest;
 import org.max.lesson3.seminar.accuweather.location.Location;
 import org.max.lesson3.seminar.accuweather.weather.DailyForecast;
 import org.max.lesson3.seminar.accuweather.weather.Weather;

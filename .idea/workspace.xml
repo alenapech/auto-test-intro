@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b4914e-7a00-49bc-92d0-df05540884ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/accuweather/AutoCompleteTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/accuweather/GetWeatherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/RestAssuredExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/RestAssuredExampleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/accuweather/DemoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/accuweather/DemoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/accuweather/LogDemoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/accuweather/LogDemoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/spoonacular/DemoTestSpoonacular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/spoonacular/DemoTestSpoonacular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/spoonacular/LogDemoTestSpoonacular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/demo/spoonacular/LogDemoTestSpoonacular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/accuweather/GetLocationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/accuweather/GetWeatherOneDayTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/spoonacular/ClassifyCuisineTestSpoonacular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/spoonacular/ClassifyCuisineTestSpoonacular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/spoonacular/IngredientSubstitutesTestSpoonacular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/spoonacular/IngredientSubstitutesTestSpoonacular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/accuweather/AccuweatherAbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/accuweather/AccuweatherAbstractTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/accuweather/GetLocationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/accuweather/GetLocationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/accuweather/GetWeatherFiveDayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/accuweather/GetWeatherFiveDayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/accuweather/GetWeatherTenDayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/accuweather/GetWeatherTenDayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/spoonacular/ConvertAmountsTestSpoonacular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/spoonacular/ConvertAmountsTestSpoonacular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/spoonacular/RandomRecipesTestSpoonacular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/spoonacular/RandomRecipesTestSpoonacular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/spoonacular/SimilarRecipesTestSpoonacular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/seminar/spoonacular/SimilarRecipesTestSpoonacular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/accuweather/AccuweatherAbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/accuweather/AccuweatherAbstractTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/accuweather.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/accuweather.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +69,7 @@
       <recent name="org.max.home" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AutoCompleteTest">
+  <component name="RunManager" selected="JUnit.GetWeatherTest">
     <configuration name="AutoCompleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auto" />
       <extension name="coverage">
@@ -98,22 +81,6 @@
       <option name="PACKAGE_NAME" value="org.max.lesson3.home.accuweather" />
       <option name="MAIN_CLASS_NAME" value="org.max.lesson3.home.accuweather.AutoCompleteTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.round" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auto-test-intro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.max.home.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.max.home" />
-      <option name="MAIN_CLASS_NAME" value="org.max.home.GameTest" />
-      <option name="METHOD_NAME" value="round(org.max.home.Player,int,boolean)" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,6 +116,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GetWeatherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.max.lesson3.home.accuweather.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.max.lesson3.home.accuweather" />
+      <option name="MAIN_CLASS_NAME" value="org.max.lesson3.home.accuweather.GetWeatherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GetWeatherTest.getWeatherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auto" />
       <extension name="coverage">
@@ -167,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GetWeatherTest" />
         <item itemvalue="JUnit.AutoCompleteTest" />
         <item itemvalue="JUnit.GetWeatherTest.getWeatherTest" />
         <item itemvalue="JUnit.GetWeatherOneDayTest.getWeatherOneDayTest" />
         <item itemvalue="JUnit.GetWeatherOneDayTest" />
-        <item itemvalue="JUnit.GameTest.round" />
       </list>
     </recent_temporary>
   </component>
