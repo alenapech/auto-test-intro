@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b4914e-7a00-49bc-92d0-df05540884ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/accuweather/AccuweatherAbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/lesson3/home/accuweather/AccuweatherAbstractTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/accuweather.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/accuweather.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
