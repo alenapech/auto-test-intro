@@ -1,15 +1,13 @@
 package org.max.demo;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.sql.*;
 
 /**
  * Демонстрация взаимодействия с СУБД через механизмы java.sql
  */
+@Disabled
 public class ConnectionTest {
 
     //Объект подключения

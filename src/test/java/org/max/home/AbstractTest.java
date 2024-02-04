@@ -28,14 +28,11 @@ public class AbstractTest {
             System.exit(0);
         }
 
-        try {
-            Configuration configuration = new Configuration();
-            configuration.configure();
+        Configuration configuration = new Configuration();
+        configuration.configure();
 
-            ourSessionFactory = configuration.buildSessionFactory();
-        } catch (Throwable ex) {
-            throw new ExceptionInInitializerError(ex);
-        }
+        ourSessionFactory = configuration.buildSessionFactory();
+
 
         System.out.println("Opened database successfully");
     }

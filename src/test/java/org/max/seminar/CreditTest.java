@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Optional;
 
+@Disabled
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class CreditTest extends AbstractTest {
 

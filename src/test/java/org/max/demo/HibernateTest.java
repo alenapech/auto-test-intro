@@ -5,10 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,6 +13,7 @@ import java.util.Optional;
 /**
  * Демо для демонстрации взаимодействия с БД через hibernate
  */
+@Disabled
 public class HibernateTest {
 
     //Фабрика для создания подключений

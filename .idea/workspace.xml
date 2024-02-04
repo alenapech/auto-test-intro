@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0b4914e-7a00-49bc-92d0-df05540884ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/home/ProductHibernateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/demo/ConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/demo/ConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/demo/HibernateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/demo/HibernateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/home/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/home/AbstractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/home/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/home/CustomerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/seminar/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/ClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/seminar/CreditTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/CreditTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/seminar/CurrentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/CurrentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/seminar/DebitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/DebitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/max/seminar/EmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/EmployeeTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lesson3" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2bqgK6XmizrHmRf5cMcd37NGLEr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Program Files/Java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.34712642",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.max.home" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.max.lesson3.home.accuweather" />
+      <recent name="org.max.home" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ProductHibernateTest.updateProduct_whenValid_shouldSave">
+    <configuration name="CustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.max.home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.max.home" />
+      <option name="MAIN_CLASS_NAME" value="org.max.home.CustomerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerTest.getCustomers_whenValid_shouldReturn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.max.home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.max.home" />
+      <option name="MAIN_CLASS_NAME" value="org.max.home.CustomerTest" />
+      <option name="METHOD_NAME" value="getCustomers_whenValid_shouldReturn" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.max.seminar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.max.seminar" />
+      <option name="MAIN_CLASS_NAME" value="org.max.seminar.EmployeeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductHibernateTest.addProduct_whenValid_shouldSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.max.home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.max.home" />
+      <option name="MAIN_CLASS_NAME" value="org.max.home.ProductHibernateTest" />
+      <option name="METHOD_NAME" value="addProduct_whenValid_shouldSave(short,java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductHibernateTest.updateProduct_whenValid_shouldSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.max.home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.max.home" />
+      <option name="MAIN_CLASS_NAME" value="org.max.home.ProductHibernateTest" />
+      <option name="METHOD_NAME" value="updateProduct_whenValid_shouldSave(short,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProductHibernateTest.updateProduct_whenValid_shouldSave" />
+        <item itemvalue="JUnit.ProductHibernateTest.addProduct_whenValid_shouldSave" />
+        <item itemvalue="JUnit.CustomerTest" />
+        <item itemvalue="JUnit.EmployeeTest" />
+        <item itemvalue="JUnit.CustomerTest.getCustomers_whenValid_shouldReturn" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0b4914e-7a00-49bc-92d0-df05540884ac" name="Changes" comment="" />
+      <created>1706947958794</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706947958794</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="lesson3" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

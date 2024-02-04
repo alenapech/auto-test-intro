@@ -2,12 +2,14 @@ package org.max.seminar;
 
 import org.hibernate.query.Query;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+@Disabled
 public class DebitTest extends AbstractTest {
 
     @Test

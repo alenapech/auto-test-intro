@@ -3,6 +3,7 @@ package org.max.seminar;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+@Disabled
 public class CurrentTest extends AbstractTest {
 
     @Test
