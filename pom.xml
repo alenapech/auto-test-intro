@@ -19,6 +19,7 @@
         <wiremock.version>1.58</wiremock.version>
         <surefire.version>2.22.2</surefire.version>
         <jackson.version>2.15.0</jackson.version>
+        <assured.version>5.3.0</assured.version>
     </properties>
 
     <!-- Архивирование -->
@@ -49,6 +50,12 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${assured.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- Лекция 5. Логирование -->

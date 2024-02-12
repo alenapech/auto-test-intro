@@ -1,6 +1,8 @@
-package org.max.seminar.spoon;
+package org.max.home;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
+import io.restassured.RestAssured;
+import io.restassured.parsing.Parser;
 import org.apache.http.HttpResponse;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -19,15 +21,15 @@ public class AbstractTest {
     private static final int port = 8080;
     private static String baseUrl;
 
-    private static final Logger logger
-            = LoggerFactory.getLogger(AbstractTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(AbstractTest.class);
 
     @BeforeAll
     static void startServer() {
+        RestAssured.defaultParser = Parser.JSON;
         baseUrl = "http://localhost:" + port;
         wireMockServer.start();
         configureFor("localhost", port);
-        logger.info("Start WireMockServer on port {}",port);
+        logger.info("Start WireMockServer on port {}", port);
     }
 
     @AfterAll
@@ -36,7 +38,6 @@ public class AbstractTest {
         logger.info("Stop WireMockServer");
     }
 
-    //Вспомогательный метод - конвертор body to string
     public String convertResponseToString(HttpResponse response) throws IOException {
         logger.debug("convertResponseToString method call");
         try(InputStream responseStream = response.getEntity().getContent();

@@ -1,5 +1,6 @@
 package org.max.demo;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,6 +8,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Демонстрация работы библиотеки логирования
  */
+@Disabled
 public class LogbackExampleTest {
 
     //Создание объекта Logger

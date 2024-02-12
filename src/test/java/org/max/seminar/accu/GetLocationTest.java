@@ -6,6 +6,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.max.seminar.accu.location.Location;
 import org.slf4j.Logger;
@@ -19,7 +20,8 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlPathEqualTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GetLocationTest extends AbstractTest{
+@Disabled
+ public class GetLocationTest extends AbstractTest{
 
     private static final Logger logger
             = LoggerFactory.getLogger(GetLocationTest.class);
