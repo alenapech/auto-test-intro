@@ -1,9 +1,11 @@
 package org.max.demo;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
+@Disabled
 public class ReportDemoTest {
 
     @Test

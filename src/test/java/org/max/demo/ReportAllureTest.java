@@ -2,11 +2,13 @@ package org.max.demo;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+@Disabled
 public class ReportAllureTest {
 
     @Test

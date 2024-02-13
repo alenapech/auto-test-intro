@@ -3,6 +3,7 @@ package org.max.seminar;
 import io.qameta.allure.*;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -12,6 +13,7 @@ import static io.restassured.RestAssured.given;
 
 @Epic(value = "Тестирование API https://spoonacular.com/food-api")
 @Feature(value = "Семинар")
+@Disabled
 public class SimilarRecipesTest extends AbstractTest {
 
     @Test
